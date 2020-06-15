@@ -1,0 +1,22 @@
+<form>
+    <div class="form-group">
+        <label for="firstName"> firstName</label> 
+        <input required minlength="5" maxlength="10" pattern="banana" ngModel name="firstName" #firstName="ngModel" 
+         type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid"> 
+           <div *ngIf="firstName.errors.required"> First name is required</div>
+           <div *ngIf="firstName.errors.minlength"> firstname should be of atleast {{firstName.errors.minlength.requiredLength}} chracter</div>
+           <div *ngIf="firstName.errors.pattern"> firstname doesnot match the pattern</div>
+        </div>
+    </div><!-- ngModel is 2 way binding
+            #firstname ia template vaiable which will pass value into it-->
+    <div class="form-group">
+        <label for="comment"> comment</label>
+        <textarea ngModel name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary">submit</button>
+    <hr>
+    <button class="btn btn-primary">fetch Posts</button>|
+    <button class="btn btn-primary">Close Posts</button>
+    
+</form>

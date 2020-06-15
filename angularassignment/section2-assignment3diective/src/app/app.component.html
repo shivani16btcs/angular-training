@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>ukhdsfkjsglk</li>
+        <li>inguygfjd</li>
+      </ol>
+      <hr>
+      <button class="btn btn-primary" (click)="ontoggleDetail()">display Detail</button>
+      <p *ngIf="showsecret"> secret passward=tuna</p>
+     <div *ngFor="let logitem of log; let i=index"
+       [ngStyle]="{backgroundColor: i>=5?'blue':'transparent'}"
+       [ngClass]="{'white-text':i >= 5}"
+       >{{logitem}}
+     </div>
+    </div>
+  </div>
+</div>

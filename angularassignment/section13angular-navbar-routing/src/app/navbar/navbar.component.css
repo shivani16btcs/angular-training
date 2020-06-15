@@ -1,0 +1,13 @@
+.spacer{
+    flex:1 1 auto;/*push the navbar content right side.*/
+}
+
+.topnav-centered  {
+    width: 100%;
+    text-align: center;
+}
+.topnav-centered li {
+        float: none;
+        display: inline-block;
+    }
+    
